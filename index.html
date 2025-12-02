@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bot Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <style>
+    /* SPAI Controls Styling */
+    .spai-controls { margin-top: 8px; padding: 6px; background:#111; border:1px solid #222; font-size:13px; }
+    .spai-controls label { display:block; margin-top:6px; color:#ccc; }
+    .spai-controls input[type="range"], .spai-controls textarea { width:100%; margin-top:4px; }
+    .spai-controls button { margin-top:6px; padding:4px 8px; background:#222; color:#ddd; border:1px solid #333; cursor:pointer; }
+    small { color:#888; }
+  </style>
+</head>
+<body>
+<h1 style="text-align:center;">RCP Bot Dashboard</h1>
+<div id="dashboard">
+
+  <!-- TicTacToe Bot Panel -->
+  <div class="bot-container" id="tictactoe-bot">
+    <div class="bot-header">TicTacToe Bot</div>
+    <div class="bot-messages" id="ttt-messages"></div>
+    <div class="bot-input">
+      <input type="text" id="ttt-input" placeholder="!command">
+      <button onclick="sendBotCommand('tictactoe')">Send</button>
+    </div>
+  </div>
+
+  <!-- Help Bot Panel -->
+  <div class="bot-container" id="help-bot">
+    <div class="bot-header">Help Bot</div>
+    <div class="bot-messages" id="help-messages"></div>
+    <div class="bot-input">
+      <input type="text" id="help-input" placeholder="!command">
+      <button onclick="sendBotCommand('help')">Send</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.scaledrone.com/scaledrone.min.js"></script>
+<script src="js/bot-tictactoe.js"></script>
+<script src="js/bot-help.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
